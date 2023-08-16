@@ -9,7 +9,7 @@ export default function EditProject({ project }) {
   const updateProject = async() => {
     try{ 
       const body = { description, status, github_link, app_link };
-      const response = await fetch(`http://localhost:4000/projects/${project.project_id}`, {
+      const response = await fetch(`https://radiant-gorge-33207-286bb0458a4b.herokuapp.com/projects/${project.project_id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify(body)

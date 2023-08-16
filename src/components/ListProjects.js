@@ -7,7 +7,7 @@ export default function ListProjects() {
 
   const deleteProject = async(id) => {
     try {
-      const deleteProject = await fetch(`http://localhost:4000/projects/${id}`, {
+      const deleteProject = await fetch(`https://radiant-gorge-33207-286bb0458a4b.herokuapp.com/projects/${id}`, {
         method: 'DELETE'
       });
 
@@ -19,7 +19,7 @@ export default function ListProjects() {
 
   const getProjects = async() => {
     try {
-      const response = await fetch('http://localhost:4000/projects')
+      const response = await fetch('https://radiant-gorge-33207-286bb0458a4b.herokuapp.com/projects')
       const jsonData = await response.json()
 
       setProjects(jsonData);

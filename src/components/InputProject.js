@@ -11,7 +11,7 @@ export default function InputProject() {
     e.preventDefault();
     try {
       const body = { title, description, status, github_link, app_link };
-      const response = await fetch('http://localhost:4000/projects', {
+      const response = await fetch('https://radiant-gorge-33207-286bb0458a4b.herokuapp.com/projects', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
